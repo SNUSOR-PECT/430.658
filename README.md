@@ -1,4 +1,4 @@
-# LeNet5-with-OpenFHE
+~~# LeNet5-with-OpenFHE
 
 ```
 LENET5-WITH-OPENFHE
@@ -116,4 +116,4 @@ docker run --rm -it openfhe-lenet5
 
     // Insert your own approximation above
 ```
-4. 적용 확인 시 6 선택
+4. 적용 확인 시 6 선택~~

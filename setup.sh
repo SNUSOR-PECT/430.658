@@ -6,6 +6,9 @@ export DEBIAN_FRONTEND=noninteractive
 export PATH=/opt/conda/bin:$PATH
 export CC=clang
 export CXX=clang++
+sudo sed -i 's|kr.archive.ubuntu.com|mirror.kakao.com|g' /etc/apt/sources.list
+sudo sed -i 's|security.ubuntu.com|mirror.kakao.com|g' /etc/apt/sources.list
+
 
 # ============================
 # 1) 필수 패키지 설치
@@ -40,7 +43,7 @@ cp environment.yml /tmp/environment.yml
 # mkdir -p /opt/intel-hexl/build
 # cd /opt/intel-hexl/build
 # cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
-# ninja
+# ninja -j2
 # ninja install
 # ldconfig
 # cd ~
@@ -53,12 +56,12 @@ mkdir -p /opt/openfhe/build
 cd /opt/openfhe/build
 cmake -G Ninja \
     -DWITH_OPENMP=ON \
-    # -DWITH_INTEL_HEXL=ON \
-    # -DINTEL_HEXL_PREBUILT=OFF \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     ..
-ninja
+# -DWITH_INTEL_HEXL=ON \
+# -DINTEL_HEXL_PREBUILT=OFF \
+ninja -j2
 ninja install
 ldconfig
 cd ~
@@ -78,5 +81,5 @@ source ~/.bashrc
 # (echo n; echo y) | ./scripts/configure.sh
 # ./scripts/build-openfhe-development.sh
 
-gnome-terminal -- bash -c "echo 새 터미널에서 실행됨; exec bash"
+# gnome-terminal -- bash -c "echo 새 터미널에서 실행됨; exec bash"
 exit

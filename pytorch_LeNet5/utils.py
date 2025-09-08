@@ -51,10 +51,11 @@ def select_activation():
     print(" 1: square (x^2)")
     print(" 2: CryptoNet (0.25 + 0.5 * x + 0.125 * x^2)")
     print(" 3: quad (0.234606 + 0.5 * x + 0.204875 * x^2 - 0.0063896 * x^4)")
-    print(" 4: ReLU-maker (utils_approx.ReLU_maker)")
-    print(" 5: student (custom polynomial)")
-
-    choice = input("Enter number (0~5): ")
+    print(" 4: student (custom polynomial)")
+    # print(" 5: ReLU-maker (utils_approx.ReLU_maker)")
+    
+    
+    choice = input("Enter number (0 ~ 4): ")
     try:
         choice_int = int(choice)
         if choice_int not in range(6):
@@ -102,3 +103,4 @@ def inference(model, data_loader, device, act_override=None):
         else:
             print(f"  Class {cls}: No samples")
     return acc
+

@@ -25,10 +25,10 @@ int main(int argc, char* argv[]) {
     std::cout << " 1 : x^2 (Square function)\n";
     std::cout << " 2 : CryptoNet (0.25 + 0.5x + 0.125x^2)\n";
     std::cout << " 3 : quad (4th degree polynomial approx.)\n";
-    std::cout << " 4 : ReLU-maker (alpah=13, B = 50)\n";
-    std::cout << " 5 : student polynomial (custom)\n";
+    // std::cout << " 4 : ReLU-maker (alpah=13, B = 50)\n";
+    std::cout << " 4 : student polynomial (custom)\n";
     std::cout << "---------------------------------------------\n";
-    std::cout << "Enter your choice (0 - 5): ";
+    std::cout << "Enter your choice (0 - 4): ";
     std::cin >> relu_mode;
     }
 

@@ -16,8 +16,7 @@ quad_relu_polynomials = {
                   "0.25 + 0.5 * x + 0.125 * x**2"),
     'quad': (lambda x: 0.234606 + 0.5 * x + 0.204875 * x ** 2 - 0.0063896 * x ** 4,
              "0.234606 + 0.5 * x + 0.204875 * x ** 2 - 0.0063896 * x ** 4"),
-    'ReLU-maker': (lambda x: ReLU_maker({'type': 'proposed', 'alpha': 13, 'B': 10})(x),
-                   "ReLU Maker with alpha==13"),
+    
 
     # === 여기에 자신만의 polynomial ReLU를 추가하세요! ==================================
     # Example
@@ -37,6 +36,7 @@ quad_relu_polynomials = {
 
 
     #=========================================================================
+    #'ReLU-maker': (lambda x: ReLU_maker({'type': 'proposed', 'alpha': 13, 'B': 10})(x), "ReLU Maker with alpha==13"),
 }
 
 
@@ -54,3 +54,5 @@ def get_description(name: str):
 def list_activations():
 
     return list(quad_relu_polynomials.keys())
+
+

@@ -279,7 +279,7 @@ std::vector<Ciphertext<DCRTPoly>> ApplyApproxReLU4_All(
         else if (mode == 1)  out = ApproxReLU4_square(cc, ct);
         else if (mode == 2)  out = ApproxReLU4_cryptonet(cc, ct);
         else if (mode == 3)  out = ApproxReLU4_quad(cc, ct);
-        else if (mode == 4)  out = ApproxReLU_Advanced(cc, ct);
+        // else if (mode == 4)  out = ApproxReLU_Advanced(cc, ct);
         else                 out = ApproxReLU4_Student(cc, ct);
 
         activated.push_back(out);

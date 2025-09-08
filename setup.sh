@@ -104,10 +104,6 @@ echo "Swap successfully resized to:"
 swapon --show
 free -h
 
-/opt/conda/bin/conda init bash
-
-cd ~
-cd LeNet5-with-OpenFHE
-mkdir build
+echo "Done!"
 
 exit

@@ -26,7 +26,7 @@ quad_relu_polynomials = {
 
 
 
-    'student': (lambda x: x, "insert your own description")
+    'student': (lambda x: x, "insert your own description"),
 
 
 
@@ -36,7 +36,7 @@ quad_relu_polynomials = {
 
 
     #=========================================================================
-    #'ReLU-maker': (lambda x: ReLU_maker({'type': 'proposed', 'alpha': 13, 'B': 10})(x), "ReLU Maker with alpha==13"),
+    'ReLU-maker': (lambda x: ReLU_maker({'type': 'proposed', 'alpha': 13, 'B': 10})(x), "ReLU Maker with alpha==13")
 }
 
 
@@ -54,5 +54,6 @@ def get_description(name: str):
 def list_activations():
 
     return list(quad_relu_polynomials.keys())
+
 
 
